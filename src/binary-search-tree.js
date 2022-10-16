@@ -89,17 +89,17 @@ class BinarySearchTree {
 
 
   remove(data) {
-    this.data = this.remove(this.data, data);
+    this.data = remove(this.data, data);
 
     function remove(node, data) {
       if (!node) {
         return null;
       }
 
-      if (data < node.value) {
+      if (data < node.data) {
         node.left = remove(node.left, data);
         return node;
-      } else if (data > node.value) {
+      } else if (data > node.data) {
         node.right = remove(node.right, data);
         return node;
       } else {
@@ -128,7 +128,6 @@ class BinarySearchTree {
         return node;
 
       }
-
     }
   }
 
